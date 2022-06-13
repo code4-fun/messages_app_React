@@ -1,0 +1,12 @@
+.appInput {
+  max-width: 400px;
+  min-width: 200px;
+}
+.appControls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.createPostBtn {
+  flex-shrink: 0;
+}
