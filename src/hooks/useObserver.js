@@ -10,12 +10,12 @@ export const useObserver = (selectedPostsPresentation, ref, canLoad, isLoading, 
     if(observer.current){
       observer.current.disconnect()
     }
-    const cb = (entries) => {
+    const call_back = (entries) => {
       if(entries[0].isIntersecting && canLoad){
         callback()
       }
     }
-    observer.current = new IntersectionObserver(cb)
+    observer.current = new IntersectionObserver(call_back)
     observer.current.observe(ref.current)
   }, [isLoading, selectedPostsPresentation])
 }

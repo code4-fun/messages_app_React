@@ -25,7 +25,7 @@ function Posts() {
   const [selectedPostsPresentation, setSelectedPostsPresentation] = useState('pagination')
   const lastElement = useRef()
 
-  const sortedAndSearchedPosts = usePosts(posts, selectedSort,searchQuery)
+  const sortedAndSearchedPosts = usePosts(posts, selectedSort, searchQuery)
   const [fetchPosts, isPostsLoading, postError] = useSpinner(async () => {
     const response = await PostService.getAll(currentPage, limit)
 
@@ -52,10 +52,12 @@ function Posts() {
 
   }, [currentPage, limit])
 
-  useObserver(selectedPostsPresentation, lastElement, currentPage < totalPages,
-      isPostsLoading, () => {
-        setCurrentPage(currentPage + 1)
-      }
+  useObserver(
+    selectedPostsPresentation,
+    lastElement,
+    currentPage < totalPages,
+    isPostsLoading,
+    () => {setCurrentPage(currentPage + 1)}
   )
 
   const createPost = (newPost) => {
@@ -90,7 +92,10 @@ function Posts() {
           />
           <MySelect
               value={limit}
-              onChange={setLimit}
+              onChange={i => {
+                setCurrentPage(1)
+                setLimit(i)
+              }}
               options={[
                 {value: 10, name: '10'},
                 {value: 25, name: '25'},
