@@ -1,9 +1,9 @@
 ### Описание
-Приложение доступно по ссылке: https://ignal1.github.io/react_messages
+Приложение [размещено](https://ignal1.github.io/react_messages) на GitHub Pages.
 
-Приложение получает сообщения с https://jsonplaceholder.typicode.com/posts и выводит их различными способами.
+Приложение получает сообщения с [jsonplaceholder](https://jsonplaceholder.typicode.com/posts) и выводит их различными способами.
 
-Реализовано:
+### Реализовано:
 
 - Pagination
 
@@ -30,13 +30,13 @@
 - SCSS
 
 ### Запуск приложения
-Клонировать проект:
+- Клонировать проект:
 
-```
-git clone https://github.com/ignal1/react_messages.git
-```
-В терминале перейти в директорию проекта и выполнить команды:
-```
-npm install
-npm start
-```
+    ```
+    git clone https://github.com/ignal1/react_messages.git
+    ```
+- В терминале перейти в директорию проекта и выполнить команды:
+    ```
+    npm install
+    npm start
+    ```
